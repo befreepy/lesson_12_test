@@ -7,6 +7,10 @@ UPLOAD_FOLDER = "uploads/images"
 
 app = Flask(__name__)
 
+"""
+импортируем и регистрируем блупринты main и loader
+"""
+
 app.register_blueprint(main_blueprint)
 app.register_blueprint(loader_blueprint)
 

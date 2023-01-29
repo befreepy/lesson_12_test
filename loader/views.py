@@ -3,12 +3,21 @@ from loader.utils import save_picture
 from main.utils import PostHandler
 import logging
 
+"""
+создаем блюпринт loader
+"""
+
 loader_blueprint = Blueprint('loader_blueprint', __name__, template_folder='templates')
 
 
 @loader_blueprint.route('/post')
 def create_new_post_page():
     return render_template('post_form.html')
+
+
+"""
+Реализуем страничку "добавить пост" при обращении к GET /post
+"""
 
 
 @loader_blueprint.route('/post', methods=['POST'])
